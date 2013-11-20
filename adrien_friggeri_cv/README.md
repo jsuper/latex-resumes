@@ -1,8 +1,8 @@
 # Friggeri Latex CV Templates
 
-### Original Author
+#### Author
 [Adrien Friggeri](https://github.com/afriggeri/cv) 
 
-### PDF Preview
+#### Preview
 friggeri cv preview
 ![screenshot](preview.png)
