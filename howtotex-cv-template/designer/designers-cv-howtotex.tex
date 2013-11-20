@@ -39,19 +39,24 @@
 \newflowframe{0.2\textwidth}{\textheight}{0pt}{0pt}[left]
 	\newlength{\LeftMainSep}
 	\setlength{\LeftMainSep}{0.2\textwidth}
-	\addtolength{\LeftMainSep}{2\columnsep}
-% right frame
+	\addtolength{\LeftMainSep}{1\columnsep}
+
+% small static frame for the vertical line
+\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
+
+% content of the static frame 
+\begin{staticcontents}{1} 
+\hfill 
+\tikz{% 
+	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=0]
+	(0,0) -- (0,\textheight);}% 
+\hfill\mbox{} 
+\end{staticcontents}
+
+% right frame 
+\addtolength{\LeftMainSep}{1.5pt} 
+\addtolength{\LeftMainSep}{1\columnsep} 
 \newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
-
-% horizontal rule between frames (using TikZ)
-\renewcommand{\ffvrule}[3]{%
-\hfill
-\tikz{%
-	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=-#1] 
-	(0,0) -- (0pt,#3);}%
-\hfill\mbox{}}
-\insertvrule{flow}{1}{flow}{2}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % define macros (for convience)
@@ -159,6 +164,15 @@ Proin rutrum pharetra molestie. Cras sollicitudin nulla nec leo lobortis in tris
 % References
 \CVSection{References}
 References upon request.
+
+%At each end of page, you should add the following line
+\clearpage \framebreak \framebreak
+
+% References
+\CVSection{New page break}
+For new page, you should add this line in the end of previous page
+\textbackslash{clearpage} \textbackslash{framebreak} \textbackslash{framebreak}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % End document
