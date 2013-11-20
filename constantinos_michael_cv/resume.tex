@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
+\raggedright
+
+%  \renewcommand{\encodingdefault}{cg}
+  %\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+#2 \lineunder 
+#3
+\end{center}
+\vspace*{-8pt}
+}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+\newcommand{\schoolwithcourses}[4]{
+ \textbf{#1} #2 $\bullet$ #3\\ 
+#4 $\bullet$  Selected Coursework:\\
+\vspace*{5pt}
+}
+\newcommand{\school}[4]{
+ \textbf{#1} #2 $\bullet$ #3\\ 
+#4 \\
+}
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-44pt}
+
+\contact{Constantinos M. Michael}
+{3700 North Charles Street, Apt 710, Baltimore MD 21218}
+{(443) 858-9725 $\bullet$ con@jhu.edu  $\bullet$ http://ugrad.cs.jhu.edu/$\sim$cmichae}
+
+\header{Education}
+
+\schoolwithcourses{The Johns Hopkins Univesity}{Baltimore, MD, U.S.A.}{Bachelor of Science in Computer Sci., 2006}
+{Cumulative GPA: 3.84/4.00}
+	\area{Computer Science}{ Unix Programming $\cdot$ Data Structures $\cdot$ Automata \& Computation $\cdot$ Computer System
+Fundamentals $\cdot$ Computer Networks $\cdot$ Info Retrieval and Web Agents $\cdot$ Operating Systems $\cdot$
+Natural Lang Processing $\cdot$ Algorithms $\cdot$ Object Oriented Systems $\cdot$ Declarative Methods $\cdot$
+Artificial Intelligence $\cdot$ Network Security $\cdot$ Databases}
+	\area{Mathematics}{Multivariable Calculus $\cdot$ Linear Algebra $\cdot$ Discrete Math $\cdot$ Math Models}
+
+\header{Work History}
+\employer{Bloomberg L.P. - Research and Development}{2005}{Software Engineer}
+	\begin{achievements}
+	\item Designed and developed an SQL abstraction layer and command-line interface over the proprietary db.
+	\item Established a library to enable integration and standardization of the Python language into the Bloomberg
+	\item Development Environment. Ported and rewrote legacy code in Python.
+	\item Designed and developed a new standard for GUI specification and Client-Server interaction.
+	\item Coded an automated data-miner capable of producing graphics-rich reports of product usage statistics.
+	\end{achievements}
+
+\employer{The Johns Hopkins University - Department of Computer Science}{2003}{Head Course Assistant for 600.113 Internet}
+	\begin{achievements}
+	\item Instructed hands-on web design skills, ranging from basic HTML, to Database-driven websites, to interactive content. Organized the course as a head Course Assistant, held office hours, assigned grades.
+	\end{achievements}
+
+\employer{Cyprus National Guard - Information Technology Branch}{during army service 2000-2002} {Web Designer, Programmer, Network Administrator}
+	\begin{achievements}
+	\item Designed and programmed the website for the Cyprus National Guard. Collaborated with a small team of both officers and drafted personnel for the website and other major projects.
+	\item Headed the design and programming of a secure and efficient document retrieval server, client, and GUI.
+	\item Drafted the security policies for numerous Army servers and administered the network infrastructure.
+	\item Tutored web design (HTML and ASP) to officers. Took part in a team effort to promote Linux usage.
+	\end{achievements}
+
+\employer{Prolix Corporation}{incorporated 2001}{90\% Owner, Programmer and Web Designer}
+	\begin{achievements}
+	\item Created Prolix, a server side application for rapid deployment and management of database intensive websites, and used it to develop websites by contractual agreement.
+	\item Retailed hardware and software after agreement with Multitech Corp., the largest regional importer.
+	\item Collaborated with fellow Fulbright scholars to design a flexible media appliance.
+	\end{achievements}
+
+\employer{University of Cyprus - MRDL (Multimedia Research and Development Laboratory)}{1999}
+	{Web Designer}
+	\begin{achievements}
+	\item Designed websites for the university research project intranet-extranet websites.
+	\item Collaborated with the MRDL Team and proposed and presented changes to existing websites.
+	\end{achievements}
+
+\employer{Hawker Website Creations}{1999}{49\% Partner, Programmer and Web Designer}
+	\begin{achievements}
+	\item Designed a gaming community website for the leading Internet Service Provider in Cyprus, Cytanet.
+	\item Created HawkerCart (flat DB and MySQL versions), applications for rapid creation of e-commerce sites.
+	\end{achievements}
+	\employer{MCM Developments}{1995 - 1998}{Computer-Aided Architectural Designer}
+	\begin{achievements}
+	\item Designed a 150-house complex (Agros, Cyprus) and a multi-tower complex (Odessa, Ukraine.)
+	\end{achievements}
+
+\header{Skills}
+\begin{achievements}
+\item Proficiency in software development in Java, Python, C, C++, C\#, Perl, Assembly, Visual Basic.
+\item Familiarity with Regular Expressions, Threads, Sockets, Database Design, SQL, JSP, ASP, \LaTeX
+\item Familiarity with UNIX, GNU/Linux, Win32.
+\end{achievements}
+
+\header{Honors and Awards}
+\begin{achievements}
+\item  Awarded the 2005 Computer Science Outstanding Undergraduate Award.
+\item Honored with the prestigious CASP Undergraduate Scholarship from the Cyprus Fulbright Commission.
+\item  Awarded the First Prize in English Poetry from The English School, Nicosia, Cyprus.
+\item Included in the Dean's List of Students, for all six completed semesters at the Johns Hopkins University.
+\end{achievements}
+
+
+\end{document}
